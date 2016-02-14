@@ -17,7 +17,7 @@
   "bugs": {
     "url": "git+https://github.com/whistle-plugins/whistle.helloworld/issues"
   },
-  "homepage": "https://github.com/whistle-plugins/whistle.helloworld#whistle.helloworld",
+  "homepage": "https://github.com/whistle-plugins/whistle.helloworld#whistlehelloworld",
   "dependencies": {
     "express": "^4.13.4",
     "jquery": "^2.2.0",
