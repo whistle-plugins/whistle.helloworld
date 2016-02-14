@@ -1,0 +1,40 @@
+{ 
+  "name": "whistle.helloworld",
+  "version": "0.0.1",
+  "description": "hello whistle.plugin",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whistle-plugins/whistle.helloworld.git"
+  },
+  "keywords": [
+    "whistle",
+    "plugin",
+    "hellworld"
+  ],
+  "author": "avenwu <avenwu@vip.qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "git+https://github.com/whistle-plugins/whistle.helloworld/issues"
+  },
+  "homepage": "https://github.com/whistle-plugins/whistle.helloworld#whistle.helloworld",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jquery": "^2.2.0",
+    "socket.io": "^1.4.5",
+    "ws": "^1.0.1"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "clipboard": "^1.5.8",
+    "codemirror": "^5.11.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "jsx-loader": "^0.13.2",
+    "react": "^0.14.6",
+    "reflux": "^0.3.0",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.12"
+  }
+}
