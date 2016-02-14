@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+htdocs
+webpack.config.js
+.idea
+*.log
+.mcms
+logs
