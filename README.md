@@ -14,6 +14,10 @@ whistle插件编写的例子，主要功能是显示转发到helloworld的http�
 	
 4. 通过配置whistle规则，转发请求到helloworld插件
 
+		helloworld://test www.ifeng.com www.qq.com
+		echo.websocket.org/?encoding=text helloworld://test123
+
+
 
 	![rule](https://raw.githubusercontent.com/whistle-plugins/whistle.helloworld/master/htdocs/img/helloworld-rule.png)
 
