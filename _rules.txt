@@ -1,3 +1,3 @@
 
 # 去除匹配到的rule，包括file、plugins、proxy等
-/./ filter://rule
+www.qq.com filter://rule
