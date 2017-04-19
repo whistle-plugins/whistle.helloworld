@@ -2,7 +2,8 @@ require('bootstrap/dist/css/bootstrap.css');
 require('../css/index.css');
 var React = require('react');
 var ReactDOM = require('react-dom');
-var socket = io.connect('/');
+// The plugin's page does not support Websocket and can only use polling
+var socket = io.connect('/', { transports: ['polling'] });
 var index = 0;
 
 function getKey() {
