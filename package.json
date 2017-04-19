@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/whistle-plugins/whistle.helloworld.git"
   },
+  "scripts": {
+    "dev": "webpack -w"
+  },
   "keywords": [
     "whistle",
     "plugin",
