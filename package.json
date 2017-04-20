@@ -1,6 +1,6 @@
 {  
   "name": "whistle.helloworld", 
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "hello whistle.plugin",
   "main": "index.js",
   "repository": {

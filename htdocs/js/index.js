@@ -3,7 +3,10 @@ require('../css/index.css');
 var React = require('react');
 var ReactDOM = require('react-dom');
 // The plugin's page does not support Websocket and can only use polling
-var socket = io.connect('/', { transports: ['polling'] });
+var socket = io.connect('/', {
+	transports: ['polling'],
+	path: location.pathname + 'socket.io', // path一定要设成相对路径
+});
 var index = 0;
 
 function getKey() {

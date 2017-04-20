@@ -49,7 +49,10 @@
 	var React = __webpack_require__(12);
 	var ReactDOM = __webpack_require__(169);
 	// The plugin's page does not support Websocket and can only use polling
-	var socket = io.connect('/', { transports: ['polling'] });
+	var socket = io.connect('/', {
+		transports: ['polling'],
+		path: location.pathname + 'socket.io', // path一定要设成相对路径
+	});
 	var index = 0;
 
 	function getKey() {
