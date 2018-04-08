@@ -1,15 +1,5 @@
-var initPluginServer = require('./lib/plugin-server');
-var initUIServer = require('./lib/ui-server');
-var initRulesServer = require('./lib/rules-server');
-
-module.exports = function(server, options) {
-	initPluginServer(server, options);
-};
-
-module.exports.uiServer = function(server, options) {
-	initUIServer(server, options);
-};
-
-module.exports.rulesServer = function(server, options) {
-	initRulesServer(server, options);
-};
+exports.statsServer = require('./lib/statsServer');
+exports.rulesServer = require('./lib/rulesServer');
+exports.server = require('./lib/server');
+exports.resRulesServer = require('./lib/resRulesServer');
+exports.resStatsServer = require('./lib/resStatsServer');

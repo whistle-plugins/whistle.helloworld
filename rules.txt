@@ -1,5 +1,0 @@
-
-# 将所有请求转发到helloworld插件
-#/./ helloworld://
-
-www.qq.com helloworld://
