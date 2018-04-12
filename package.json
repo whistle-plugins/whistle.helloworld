@@ -7,7 +7,9 @@
     "url": "https://github.com/whistle-plugins/whistle.helloworld.git"
   },
   "scripts": {
-    "dev": "webpack -w"
+    "dev": "webpack -w",
+    "lint": "eslint *.js lib",
+    "lintfix": "eslint --fix *.js lib"
   },
   "keywords": [
     "whistle",
@@ -22,9 +24,16 @@
   "homepage": "https://github.com/whistle-plugins/whistle.helloworld#whistlehelloworld",
   "dependencies": {
     "koa": "^2.5.0",
+    "koa-onerror": "^4.0.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2",
     "ws": "^5.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
+    "eslint-config-imweb": "^0.2.8"
+  },
   "engines": {
     "node": ">= 7.6"
   }
