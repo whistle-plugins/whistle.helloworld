@@ -1,7 +1,5 @@
-/**
- * 初始化钩子，whistle v1.9.6开始支持
- */
-exports.initial = require('./lib/options');
+
+exports.uiServer = require('./lib/uiServer');
 
 /**
  * 统计服务
