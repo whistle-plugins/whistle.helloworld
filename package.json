@@ -33,7 +33,9 @@
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",
-    "eslint-config-imweb": "^0.2.8"
+    "eslint-config-imweb": "^0.2.8",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.14"
   },
   "engines": {
     "node": ">= 7.6"
