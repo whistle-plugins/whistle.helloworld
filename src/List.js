@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+const docElem = document.documentElement;
+const { body } = document;
+const MAX_LEN = 200;
+const MAX_DIS = 5;
+
 class List extends Component {
   constructor(props) {
     super(props);
@@ -7,6 +12,9 @@ class List extends Component {
   }
   componentDidMount() {
     const fetchData = () => {
+      if (!this.isAtBottom()) {
+        return setTimeout(fetchData, 300);
+      }
       const { list } = this.state;
       const len = list.length;
       const lastItem = list[len - 1];
@@ -14,15 +22,21 @@ class List extends Component {
         .then(res => res.json())
         .then((data) => {
           list.push(...data);
-          const exceed = len - 300;
+          const exceed = len - MAX_LEN;
           if (exceed > 0) {
             list.splice(0, exceed);
           }
           this.setState({ list });
           setTimeout(fetchData, 1000);
-        }).catch(() => setTimeout(fetchData, 2000));
+        }).catch(() => {
+          docElem.scrollTop = 100000000000;
+          setTimeout(fetchData, 2000);
+        });
     };
     fetchData();
+  }
+  isAtBottom() {
+    return body.clientHeight < docElem.scrollTop + docElem.clientHeight + MAX_DIS;
   }
   render() {
     const { list } = this.state;
