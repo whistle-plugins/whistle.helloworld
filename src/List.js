@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const docElem = document.documentElement;
 const { body } = document;
-const MAX_LEN = 200;
+const MAX_LEN = 100;
 const MAX_DIS = 5;
 
 class List extends Component {
