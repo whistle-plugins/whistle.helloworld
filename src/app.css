@@ -6,7 +6,8 @@ html, body {
 }
 
 td {
-  padding-left: 10px;
+  padding-left: 20px;
+  border-bottom: 1px solid #ddd;
 }
 .p-servers {
   table-layout: fixed;
@@ -20,8 +21,8 @@ td {
   font-size: 14px;
 }
 .p-servers .p-url {
-  width: 300px;
+  width: 500px;
 }
 .p-servers .p-basic-info {
-  width: 200px;
+  width: 300px;
 }
