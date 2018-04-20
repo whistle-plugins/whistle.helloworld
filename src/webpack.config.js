@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  entry: { app: './src/App.js' },
+  entry: './src/App.js',
   output: {
     path: path.join(__dirname, '../public'),
-    filename: '[name].[hash].js',
+    filename: 'index.js',
   },
   module: {
     rules: [
@@ -17,6 +17,19 @@ module.exports = {
         loader: 'babel-loader',
         exclude: [
           path.join(__dirname, '../node_modules'),
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
         ],
       },
     ],

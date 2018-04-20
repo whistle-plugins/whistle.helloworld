@@ -31,17 +31,22 @@
     "ws": "^5.1.1"
   },
   "devDependencies": {
+    "@tencent/tnpm": "^5.0.14",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-config-imweb": "^0.2.8",
+    "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "i": "^0.3.6",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "style-loader": "^0.21.0",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.14"
   },

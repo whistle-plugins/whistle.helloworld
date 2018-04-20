@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import List from './List';
+import './app.css';
 
 const App = () => {
   return (
-    <div>
-      <p>React here!</p>
-    </div>
+    <List />
   );
 };
 export default App;
