@@ -31,8 +31,8 @@ class List extends Component {
             if (isAtBottom) {
               docElem.scrollTop = 100000000000;
             }
+            setTimeout(fetchData, 1000);
           });
-          setTimeout(fetchData, 1000);
         }).catch(() => setTimeout(fetchData, 2000));
     };
     fetchData();
@@ -41,7 +41,8 @@ class List extends Component {
     return body.clientHeight < docElem.scrollTop + docElem.clientHeight + MAX_DIS;
   }
   render() {
-    const { list } = this.state;
+    const self = this;
+    const { list } = self.state;
     return (
       <table className="p-servers">
         <thead>
@@ -57,9 +58,9 @@ class List extends Component {
             list.map((item) => {
               let { index } = item;
               if (!index) {
-                index = this.index || 0;
+                index = self.index || 0;
                 ++index;
-                this.index = index;
+                self.index = index;
                 item.index = index;
               }
               return (
