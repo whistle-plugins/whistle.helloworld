@@ -30,6 +30,7 @@ class List extends Component {
       <table className="p-servers">
         <thead>
           <tr>
+            <th>#</th>
             <td className="p-url">URL</td>
             <td className="p-basic-info">Basic Info</td>
             <td className="p-server-info">Plugin Server Status</td>
@@ -37,26 +38,36 @@ class List extends Component {
         </thead>
         <tbody>
           {
-            list.map(item => (
-              <tr key={item.reqId}>
-                <td style={{ wordBreak: 'break-all', wordWrap: 'break-word' }}>{item.url}</td>
-                <td>
-                  <p><strong>ID:</strong> {item.reqId}</p>
-                  <p><strong>ClientIP:</strong> {item.clientIp}</p>
-                  <p><strong>RuleValue:</strong> {item.ruleValue}</p>
-                  <p><strong>Method:</strong> {item.method}</p>
-                  <p><strong>ServerIP:</strong> {item.serverIp}</p>
-                  <p><strong>StatusCode:</strong> {item.statusCode}</p>
-                </td>
-                <td>
-                  {
-                    Object.keys(item.servers).map((name) => {
-                      return <p key={name}>√ {name}</p>;
-                    })
-                  }
-                </td>
-              </tr>
-            ))
+            list.map((item) => {
+              let { index } = item;
+              if (!index) {
+                index = this.index || 0;
+                ++index;
+                this.index = index;
+                item.index = index;
+              }
+              return (
+                <tr key={item.reqId}>
+                  <th>{index}</th>
+                  <td style={{ wordBreak: 'break-all', wordWrap: 'break-word' }}>{item.url}</td>
+                  <td>
+                    <p><strong>ID:</strong> {item.reqId}</p>
+                    <p><strong>ClientIP:</strong> {item.clientIp}</p>
+                    <p><strong>RuleValue:</strong> {item.ruleValue}</p>
+                    <p><strong>Method:</strong> {item.method}</p>
+                    <p><strong>ServerIP:</strong> {item.serverIp}</p>
+                    <p><strong>StatusCode:</strong> {item.statusCode}</p>
+                  </td>
+                  <td>
+                    {
+                      Object.keys(item.servers).map((name) => {
+                        return <p key={name}>√ {name}</p>;
+                      })
+                    }
+                  </td>
+                </tr>
+              );
+            })
           }
         </tbody>
       </table>
