@@ -7,7 +7,7 @@
     "url": "https://github.com/whistle-plugins/whistle.helloworld.git"
   },
   "scripts": {
-    "dev": "webpack -w  --config ./src/webpack.config --mode development",
+    "dev": "webpack -w  --config ./src/webpack.config --mode production",
     "lint": "eslint *.js src lib",
     "lintfix": "eslint --fix src *.js lib"
   },
