@@ -26,12 +26,14 @@ class List extends Component {
           if (exceed > 0) {
             list.splice(0, exceed);
           }
-          this.setState({ list });
+          const isAtBottom = this.isAtBottom();
+          this.setState({ list }, () => {
+            if (isAtBottom) {
+              docElem.scrollTop = 100000000000;
+            }
+          });
           setTimeout(fetchData, 1000);
-        }).catch(() => {
-          docElem.scrollTop = 100000000000;
-          setTimeout(fetchData, 2000);
-        });
+        }).catch(() => setTimeout(fetchData, 2000));
     };
     fetchData();
   }
