@@ -15,7 +15,7 @@ class List extends Component {
       if (!this.isAtBottom()) {
         return setTimeout(fetchData, 300);
       }
-      const { list } = this.state;
+      let { list } = this.state;
       const len = list.length;
       const lastItem = list[len - 1];
       fetch(`cgi-bin/list?lastId=${lastItem ? lastItem.reqId : ''}&${Date.now()}`)
@@ -23,8 +23,8 @@ class List extends Component {
         .then((data) => {
           list.push(...data);
           const exceed = len - MAX_LEN;
-          if (exceed > 0) {
-            list.splice(0, exceed);
+          if (exceed > 30) {
+            list = list.slice(exceed);
           }
           const isAtBottom = this.isAtBottom();
           this.setState({ list }, () => {

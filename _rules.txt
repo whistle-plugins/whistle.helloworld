@@ -1,0 +1,2 @@
+/addheaders1/ resHeaders://{whistle.helloworld/test}
+/addheaders2/ resHeaders://(x-whistle-helloworld2=test)

@@ -1,0 +1,3 @@
+{
+  "whistle.helloworld/test": "x-whistle-helloworld: test values"
+}
