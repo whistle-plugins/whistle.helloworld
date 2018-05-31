@@ -1,1 +1,1 @@
-/\?test=whistle.helloworld/ whistle.nohost://fromPluginRules
+/\?test=whistle.helloworld/ whistle.helloworld://fromPluginRules
